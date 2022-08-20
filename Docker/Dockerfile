@@ -4,6 +4,8 @@ FROM ***
 LABEL
 
 # RUNはイメージ作成時に指定したコマンドが実行される
+# pip install等はRUNで実施
+# CMDでやっても反映されない
 RUN apt-get update && apt-get install -y \
     package1 \
     package2 
