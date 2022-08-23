@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  # build Dockerfile in the same layer and run image
+  web:
+    build: .
+    # port setting
+    ports:
+      - "8000:5000"
+    # mount volumes into container
+    volumes:
+      -.:/code
+    # set environment variables
+    environment:
+      - FLASK_ENV: development
+  # Can be built from existing images 
+  redis:
+    image: "redis:alpine"
