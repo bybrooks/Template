@@ -2,3 +2,8 @@
 ```
 sudo chown <user_name> /var/run/docker.sock
 ```
+
+### 使っていないイメージをクリーンアップ
+```
+docker image prune
+```
