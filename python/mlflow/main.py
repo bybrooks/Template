@@ -12,6 +12,8 @@ def load_config(cfg: DictConfig):
 
     Notes:
         - 設定ファイルの拡張子でymlはNG。必ずyamlを使用すること。
+        - この方法では、cfgをreturnできないため、関数内で処理を行う必要がある。
+        - シンプルに「OmegaConf.load("config/default.yaml")」でyamlを読み込むことも可能。
 
     """
-    return cfg
+    print(OmegaConf.to_yaml(cfg))
